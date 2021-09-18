@@ -15,7 +15,6 @@ public class MoviesCatalogImp implements IMoviesCatalog {
         this.data = new DataAccessImp();
     }
 
-
     @Override
     public void newMovie(String name) {
         Movie movie = new Movie(name);
@@ -57,10 +56,8 @@ public class MoviesCatalogImp implements IMoviesCatalog {
         try {
             if (this.data.isPresent(RESOURCE_NAME)) {
                 data.deleteResource(RESOURCE_NAME);
-                data.newResource(RESOURCE_NAME);
-            }else{
-                data.newResource(RESOURCE_NAME);
             }
+            data.newResource(RESOURCE_NAME);
         } catch (DataAccessEx | FileNotFoundException dataAccessEx) {
             System.out.println("Something went wrong");
             dataAccessEx.printStackTrace();

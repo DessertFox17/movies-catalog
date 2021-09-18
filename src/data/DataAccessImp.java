@@ -99,9 +99,4 @@ public class DataAccessImp implements IDataAccess {
         }
         System.out.println("File was deleted successfully");
     }
-
-    protected void exceptionHandler(Exception e) throws ReaddingDataEx {
-        e.printStackTrace();
-        throw new ReaddingDataEx("Something went wrong: " + e.getMessage());
-    }
 }
