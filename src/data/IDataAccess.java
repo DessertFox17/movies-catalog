@@ -12,7 +12,7 @@ public interface IDataAccess {
     boolean isPresent(String resourceName) throws DataAccessEx, FileNotFoundException;
     List<Movie> getMovies(String resourceName) throws ReaddingDataEx;
     void newMovie(String resourceName, Movie movie, boolean append) throws WritingDataEx;
-    Movie findMovie(String resourceName, String movieName) throws ReaddingDataEx;
+    String findMovie(String resourceName, String movieName) throws ReaddingDataEx;
     void newResource(String resourceName) throws DataAccessEx;
     void deleteResource(String resourceName) throws DataAccessEx;
 }
